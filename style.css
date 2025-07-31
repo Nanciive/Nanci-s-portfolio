@@ -1,0 +1,352 @@
+/* 全局设置 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  .logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 80px;          /* 可根据需要调整大小 */
+    height: auto;
+    z-index: 1000;        /* 保证它在最上层 */
+  }
+  @media (max-width: 768px) {
+    .logo {
+      width: 60px;
+      top: 10px;
+      left: 10px;
+    }
+  }  
+
+  /* 顶部栏整体样式 */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 10px 20px;
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+  }
+  
+  /* logo 样式（在 top-bar 中时） */
+  .top-bar .logo {
+    width: 60px;
+    height: auto;
+  }
+  
+  /* 导航链接样式 */
+  .nav-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #f2f2f2;
+  }
+  
+
+  /* 顶部介绍 */
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff;
+
+    background-image: url('assets/background.jpg'); /* 👈 替换成你的图片路径 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .intro h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+    margin: 4rem 0;
+  }
+  
+  .intro p {
+    font-size: 2rem;
+    color: #333;
+    margin: 4rem 0;
+  }
+  
+  /* 项目导航链接 */
+  .projects {
+    padding: 1rem;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .project-link {
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    display: block;
+  }
+  
+  .project-link:hover {
+    background-color: #444;
+  }
+  
+  .link-center {
+    text-align: center;
+    margin: 4rem 0;
+  }
+  
+  
+  /* 每个项目的介绍区域 */
+  .project-intro {
+    height: 100vh;              /* 占满一整屏高度 */
+    display: flex;              /* 用 flex 居中内容 */
+    flex-direction: column;
+    justify-content: center;    /* 垂直居中 */
+    align-items: center;        /* 水平居中 */
+
+    color: #000;              /* 文字白色 */
+    padding: 0 20px;            /* 防止文字太贴边 */
+    text-align: center;
+  }
+  
+  .project-intro h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-intro p {
+    font-size: 1.2rem;
+    max-width: 800px;
+  }
+  
+  .project-detail {
+    margin: 3rem 0;
+    padding: 0 1rem;
+  }
+  
+  .project-detail h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    margin: 4rem 0;
+  }
+  
+  .project-detail p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #555;
+    padding: 0 6rem;
+  }
+
+  .trophy-text {
+    margin-top: 20px;   /* 与奖杯的距离 */
+    margin-bottom: 40px; /* 与下方图片的距离 */
+    text-align: center;  /* 可选：居中对齐 */
+    font-size: 0.8rem;     /* 可选：调整字体大小 */
+  }
+  
+  .carousel-container {
+    position: relative; 
+    padding: 0 4vw; /* 左右空出一点空间，vw 是相对屏幕宽度的单位 */
+    margin: 2rem 0;  /* 上下间距 */
+  }
+  
+  .carousel-image {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 保持 16:9 比例 */
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  
+  /* 鼠标悬停放大 */
+  .carousel-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 左右箭头按钮 */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .carousel-button.left {
+    left: 2vw;
+  }
+  
+  .carousel-button.right {
+    right: 2vw;
+  }
+  
+  .award-link {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .award-link a {
+    text-decoration: none;
+    color: white; /* 或黑色，根据背景 */
+    display: inline-block;
+  }
+  
+  .award-icon {
+    width: 160px;
+    height: 160px;
+    transition: transform 0.3s ease;
+  }
+  
+  .award-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .award-link p {
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .intro h1 {
+      font-size: 2rem;
+    }
+  
+    .intro p {
+      font-size: 1rem;
+    }
+  
+    .project-link {
+      font-size: 0.95rem;
+      padding: 0.75rem;
+    }
+  
+    .project-detail h2 {
+      font-size: 1.5rem;
+    }
+  
+    .project-detail p {
+      font-size: 0.95rem;
+    }
+  }
+
+  .gradient-transition {
+    height: 300px; /* 你可以根据需要调整高度 */
+    background: linear-gradient(to bottom, #ffffff, rgba(0, 0, 0, 0.5));
+  }
+  
+  .contact-section {
+    position: relative;
+    background-image: url('assets/contact-bg.jpg'); /* 👉 替换为你的图片路径 */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* 黑色半透明遮罩 */
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 可调整透明度 */
+    z-index: 1;
+  }
+  
+  /* 让文字在遮罩之上 */
+  .contact-section h2,
+  .contact-section p,
+  .contact-section ul {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* 联系方式列表样式 */
+  .contact-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .contact-section li {
+    margin: 10px 0;
+  }
+  
+  .contact-section a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .image-indicator {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .carousel-indicator {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  

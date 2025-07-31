@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nanci 的作品集</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<img src="logo.jpg" alt="Nanci Logo" class="logo">
+<header class="top-bar">
+    <img src="logo.jpg" alt="Nanci Logo" class="logo">
+    <div class="nav-wrapper">
+      <nav class="nav-links">
+      <a href="#project1">Ray</a>
+      <a href="#project2">随时随瑞</a>
+      <a href="#project3">Gold Space</a>
+      <a href="#project4">InBetween</a>
+      <a href="#project5">WUDANG</a>
+    </nav>
+  </header>  
+<body>
+  <section class="intro">
+    <h1>Hi, I am Nanci</h1>
+    <br>
+    <p>——A designer from China</p>
+  </section>
+
+  <!-- 项目详情（示例：项目1） -->
+  <section class="project-intro" id="project1">
+    <h1>Ray</h1>
+    <p>
+        Led the service design of "Ray," a sun protection education system for children. By integrating gamification and behavioral psychology, the project innovatively combines virtual pets with UV-sensitive toys to help children develop sun-safe habits.
+        <br>
+        <br>
+        Award: 🏆Second Place —— ISDIN Group, 2025 Student Service Design Challenge 
+    </p>
+  </section>
+  <section class="project-detail">
+    <div class="award-link">
+        <a href="https://servicedesignchallenge.com/winner-announcement-2025" target="_blank">
+          <img src="assets/icons/trophy.png" alt="Award Icon" class="award-icon" />
+          <br>
+          <p class="trophy-text">Tap the trophy for more about the project</p>
+        </a>
+      </div>          
+    <div class="carousel-container" data-index="0">
+      <div class="carousel-images">
+        <img src="assets/project1/image1.jpg" alt="图1" class="carousel-image" />
+        <img src="assets/project1/image2.jpg" alt="图2" class="carousel-image" />
+        <img src="assets/project1/image3.jpg" alt="图3" class="carousel-image" />
+        <img src="assets/project1/image4.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project1/image5.jpg" alt="图5" class="carousel-image" />
+      </div>
+      <button class="carousel-button left" onclick="prevImage(0)">&#10094;</button>
+      <button class="carousel-button right" onclick="nextImage(0)">&#10095;</button>
+       <!-- 这里是新增的指示器 -->
+        <div class="carousel-indicator" id="indicator-0"></div>
+    </div>
+  </section>
+  <!-- 项目详情（示例：项目2） -->
+  <section class="project-intro" id="project2">
+    <h1>随时随瑞
+        <br>
+        Luckin Anytime, Anywhere
+    </h1>
+    <p>
+        Using Luckin Coffee as a brand case, this project explores AIGC-assisted design to meet users' need for instant gratification. It enables on-the-go gameplay and combines online and offline experiences. Offline-exclusive coupon games drive engagement, delivering both fun and rewards. The project also establishes UI guidelines for the mini-game interface, including typography, colors, logo, and icons.
+    </p>
+  </section>
+  <section class="project-detail">
+    <div class="carousel-container" data-index="1">
+      <div class="carousel-images">
+        <img src="assets/project2/image1.jpg" alt="图1" class="carousel-image" />
+        <img src="assets/project2/image2.jpg" alt="图2" class="carousel-image" />
+      </div>
+      <button class="carousel-button left" onclick="prevImage(1)">&#10094;</button>
+      <button class="carousel-button right" onclick="nextImage(1)">&#10095;</button>
+        <div class="carousel-indicator" id="indicator-1"></div>
+    </div>
+  </section>
+  <!-- 项目详情（示例：项目3） -->
+  <section class="project-intro" id="project3">
+    <h1>Gold Space</h1>
+    <p>
+        We ask; How might spending time in nature shift the way we think and feel about money?in GoldeSpace, groupactivities and guided interventions create safe, supportive settings where people can explore their lives withoutiudgment, Surrounded by greenery, participants reflect, share, and grow -together.
+    </p>
+  </section>
+  <section class="project-detail">
+    <div class="carousel-container" data-index="2">
+      <div class="carousel-images">
+        <img src="assets/project3/image1.jpg" alt="图1" class="carousel-image" />
+        <img src="assets/project3/image2.jpg" alt="图2" class="carousel-image" />
+        <img src="assets/project3/image3.jpg" alt="图3" class="carousel-image" />
+        <img src="assets/project3/image4.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project3/image5.jpg" alt="图5" class="carousel-image" />
+        <img src="assets/project3/image6.jpg" alt="图6" class="carousel-image" />
+        <img src="assets/project3/image7.jpg" alt="图7" class="carousel-image" />
+        <img src="assets/project3/image8.jpg" alt="图8" class="carousel-image" />
+        <img src="assets/project3/image9.jpg" alt="图9" class="carousel-image" />
+        <img src="assets/project3/image10.jpg" alt="图10" class="carousel-image" />
+        <img src="assets/project3/image11.jpg" alt="图11" class="carousel-image" />
+        <img src="assets/project3/image12.jpg" alt="图12" class="carousel-image" />
+        <img src="assets/project3/image13.jpg" alt="图13" class="carousel-image" />
+        <img src="assets/project3/image14.jpg" alt="图14" class="carousel-image" />
+        <img src="assets/project3/image15.jpg" alt="图15" class="carousel-image" />
+      </div>
+      <button class="carousel-button left" onclick="prevImage(2)">&#10094;</button>
+      <button class="carousel-button right" onclick="nextImage(2)">&#10095;</button>
+      <div class="carousel-indicator" id="indicator-2"></div>
+    </div>
+  </section>
+    <!-- 项目详情（示例：项目4） -->
+    <section class="project-intro" id="project4">
+        <h1>InBetweeb</h1>
+        <p>Breath rural, live connect!</p>
+      </section>
+      <section class="project-detail">
+        <div class="carousel-container" data-index="3">
+          <div class="carousel-images">
+            <img src="assets/project4/image1.jpg" alt="图1" class="carousel-image" />
+            <img src="assets/project4/image2.jpg" alt="图2" class="carousel-image" />
+            <img src="assets/project4/image3.jpg" alt="图3" class="carousel-image" />
+            <img src="assets/project4/image4.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image5.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image6.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image7.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image8.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image9.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image10.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image11.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image12.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image13.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image14.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image15.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image16.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image17.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image18.jpg" alt="图4" class="carousel-image" />
+            <img src="assets/project4/image19.jpg" alt="图4" class="carousel-image" />
+          </div>
+          <button class="carousel-button left" onclick="prevImage(3)">&#10094;</button>
+          <button class="carousel-button right" onclick="nextImage(3)">&#10095;</button>
+          <div class="carousel-indicator" id="indicator-3"></div>
+        </div>
+      </section>
+        <!-- 项目详情（示例：项目5） -->
+        <section class="project-intro" id="project5">
+            <h1>WUDANG</h1>
+            <p>
+
+            </p>
+          </section>
+          <section class="project-detail">
+    <div class="carousel-container" data-index="4">
+      <div class="carousel-images">
+        <img src="assets/project5/image1.jpg" alt="图1" class="carousel-image" />
+        <img src="assets/project5/image2.jpg" alt="图2" class="carousel-image" />
+        <img src="assets/project5/image3.jpg" alt="图3" class="carousel-image" />
+        <img src="assets/project5/image4.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project5/image5.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project5/image6.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project5/image7.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project5/image8.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project5/image9.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project5/image10.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project5/image11.jpg" alt="图4" class="carousel-image" />
+        <img src="assets/project5/image12.jpg" alt="图4" class="carousel-image" />
+      </div>
+      <button class="carousel-button left" onclick="prevImage(4)">&#10094;</button>
+      <button class="carousel-button right" onclick="nextImage(4)">&#10095;</button>
+      <div class="carousel-indicator" id="indicator-4"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+<div class="gradient-transition"></div>
+<footer class="contact-section">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch, feel free to reach out:</p>
+    <ul>
+      <li>Email: <a href="Lyingnan2022@163.com">Lyingnan2022.com</a></li>
+      <li>Instagram: <a href="https://www.instagram.com/kfcvvvvvm50?igsh=MTZ6cTNnaDBwYnMyYg==" target="_blank">@kfcvvvvvm50</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/yingnan-li-44aa9433a/" target="_blank">Yingnan Li</a></li>
+    </ul>
+  </footer>
+  <script>
+    const currentIndexes = [];
+  
+    function showImage(projectIndex, imageIndex) {
+      const containers = document.querySelectorAll(".carousel-container");
+      const container = containers[projectIndex];
+      const images = container.querySelectorAll(".carousel-image");
+  
+      if (imageIndex < 0) imageIndex = images.length - 1;
+      if (imageIndex >= images.length) imageIndex = 0;
+  
+      // 隐藏所有图片
+      images.forEach((img, idx) => {
+        img.style.display = idx === imageIndex ? "block" : "none";
+      });
+  
+      currentIndexes[projectIndex] = imageIndex;
+  
+      const indicator = document.getElementById(`indicator-${projectIndex}`);
+      if (indicator) {
+        indicator.textContent = `Image ${imageIndex + 1} of ${images.length}`;
+      }
+    }
+  
+    function changeImage(projectIndex, direction) {
+      const current = currentIndexes[projectIndex] || 0;
+      const newIndex = current + direction;
+      showImage(projectIndex, newIndex);
+    }
+  
+    // 初始化所有轮播
+    window.onload = function () {
+      const containers = document.querySelectorAll(".carousel-container");
+      containers.forEach((container, index) => {
+        currentIndexes[index] = 0;
+        showImage(index, 0);
+      });
+    };
+  </script>
+  
+  
+</html>
